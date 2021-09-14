@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./list.component.css">
+</head>
+
+<body>
+  <h1 class=" wow bounceIn">list All teachers</h1>
+  <div class="container i1  wow bounceIn">
+    <div class="card">
+      <div class="card-body i3 ">
+    <table class="table i2">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>course</th>
+        </tr>
+        <tr *ngFor="let data of allData">
+          <td>{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{ data.course }}</td>
+          <!-- <td (click)="delete(data.id)" class=" btn btn-danger btn-sm" > Delete</td> -->
+            <a class=" dropdown-toggle btn btn-danger btn-sm " data-toggle="dropdown" >
+              Delete & update
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a (click)="delete(data.id)" class="dropdown-item" >Delete</a>
+              <a  class="dropdown-item" routerLink="{{ data.id }}" >update</a>
+            </div>
+          
+        </tr>
+    </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

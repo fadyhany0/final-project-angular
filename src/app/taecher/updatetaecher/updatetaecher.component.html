@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./updatetaecher.component.css">
+</head>
+
+<body>
+  <h1>update teacher</h1>
+  <div class="container i1  wow bounceIn">
+    <div class="card">
+      <div class="card-body i2">
+        <div class="from-group">
+          <label>Name</label>
+          <input [(ngModel)]="model.name" type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="from-group">
+          <label>course</label>
+          <input [(ngModel)]="model.course"  type="text" class="form-control" placeholder="course">
+        </div>
+        <button class="btn btn btn-danger text-center i3 "  (click)="update()"  >send data</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
